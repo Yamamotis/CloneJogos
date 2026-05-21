@@ -159,7 +159,7 @@
 
     function loadFlash() {
       if (!window.RufflePlayer) {
-        showError('Ruffle n&atilde;o carregou. Abra via servidor local (start-server.bat) ou verifique sua conex&atilde;o.');
+        showError('Ruffle n&atilde;o carregou. Verifique sua conex&atilde;o.');
         return;
       }
       var ruffle = window.RufflePlayer.newest();
@@ -180,10 +180,12 @@
       document.head.appendChild(s);
     }
 
+    // CDN como primário — inclui os .wasm necessários servidos pelo próprio CDN.
+    // O ruffle.js local não possui os .wasm e não funciona em hospedagem externa.
     document.addEventListener('DOMContentLoaded', function () {
-      tryLoad('ruffle.js', function () {
-        tryLoad('https://unpkg.com/@ruffle-rs/ruffle', function () {
-          showError('N&atilde;o foi poss&iacute;vel carregar o emulador Ruffle. Verifique a conex&atilde;o ou execute via servidor local.');
+      tryLoad('https://unpkg.com/@ruffle-rs/ruffle', function () {
+        tryLoad('https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle', function () {
+          showError('N&atilde;o foi poss&iacute;vel carregar o Ruffle. Verifique sua conex&atilde;o com a internet.');
         });
       });
     });
