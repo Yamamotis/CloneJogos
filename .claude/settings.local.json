@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -3 -m http.server 8000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/)",
+      "PowerShell(try { \\(Invoke-WebRequest -Uri \"http://127.0.0.1:8000/\" -TimeoutSec 3\\).StatusCode } catch { \"Server not running\" })",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Mathe\\\\OneDrive\\\\Área de Trabalho\\\\projeto flash\" | Select-Object Name, @{N=\"Tamanho\";E={\"{0:N2} MB\" -f \\($_.Length / 1MB\\)}} | Format-Table -AutoSize)"
+    ]
+  }
+}

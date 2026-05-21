@@ -1,0 +1,577 @@
+/* ClickJogos 2010 Clone - CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 12px;
+  background: #c8c8c8;
+  color: #333;
+}
+
+a { text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ===== HEADER ===== */
+.site-header {
+  background: #2b2b2b;
+  padding: 8px 0;
+}
+
+.header-inner {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+.logo-click {
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: 34px;
+  color: #ffffff;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+}
+
+.logo-jogos {
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: 34px;
+  color: #f5a800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.logo-domain {
+  color: #888;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  margin-left: 2px;
+  align-self: flex-end;
+  margin-bottom: 4px;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.header-btns {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 4px;
+  justify-content: flex-end;
+}
+
+.hbtn {
+  background: #3c3c3c;
+  color: #cccccc;
+  border: 1px solid #555;
+  padding: 4px 14px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+}
+
+.hbtn:hover { background: #4a4a4a; color: #fff; }
+
+.search-input {
+  width: 220px;
+  padding: 4px 8px;
+  border: 1px solid #555;
+  background: #f0f0f0;
+  font-size: 12px;
+  outline: none;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.main-nav {
+  background: #f37021;
+  border-top: 2px solid #c85800;
+  border-bottom: 2px solid #c85800;
+}
+
+.nav-inner {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  overflow: hidden;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 7px;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 28px;
+}
+
+.main-nav a:hover { background: rgba(0,0,0,0.12); }
+
+.nav-home { font-size: 15px !important; padding: 0 10px !important; }
+
+.nav-arrow {
+  color: rgba(255,255,255,0.55);
+  font-size: 9px;
+  flex-shrink: 0;
+}
+
+/* ===== PAGE LAYOUT ===== */
+.page-body {
+  padding: 6px 0 10px;
+}
+
+.page-container {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.left-sidebar {
+  width: 128px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+.cat-list {
+  list-style: none;
+}
+
+.cat-list li {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.cat-list li:last-child { border-bottom: none; }
+
+.cat-list li a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 7px;
+  color: #cc3300;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cat-list li a:hover {
+  background: #fff5ee;
+  color: #aa1100;
+}
+
+.cat-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.cat-meninas   { background: #ffaabb; }
+.cat-carros    { background: #dd2222; }
+.cat-motos     { background: #333333; }
+.cat-futebol   { background: #22882a; }
+.cat-corrida   { background: #111111; }
+.cat-mario     { background: #e04400; }
+.cat-luta      { background: #884400; }
+.cat-classicos { background: #ddaa00; }
+.cat-bob       { background: #eecc00; }
+.cat-guerra    { background: #446622; }
+.cat-sinuca    { background: #001166; }
+.cat-agilidade { background: #2244bb; }
+.cat-estrategia{ background: #442299; }
+.cat-plataforma{ background: #006644; }
+.cat-sonic     { background: #0044cc; }
+.cat-rpg       { background: #6a3a0a; }
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== GAME SECTIONS ===== */
+.games-section {
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  margin-bottom: 6px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+}
+
+.section-header {
+  background: #f0f0f0;
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.section-dot {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #aaaaaa, #555555);
+  border: 2px solid #888888;
+  flex-shrink: 0;
+}
+
+.more-link {
+  margin-left: auto;
+  color: #ff6600;
+  font-size: 11px;
+  font-weight: bold;
+  background: #fff5e8;
+  border: 1px solid #ffaa44;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.more-link:hover { background: #ffe0c0; text-decoration: underline; }
+
+/* ===== FEATURED ROW (large + side) ===== */
+.featured-row {
+  display: flex;
+  padding: 8px 10px;
+  gap: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Large featured card */
+.game-card-large {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.game-thumb-large {
+  width: 195px;
+  height: 135px;
+  flex-shrink: 0;
+  border: 1px solid #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.game-thumb-large:hover { opacity: 0.88; }
+
+.thumb-emoji-lg { font-size: 52px; }
+.thumb-emoji-md { font-size: 32px; }
+.thumb-emoji-sm { font-size: 24px; }
+
+.game-info { flex: 1; min-width: 0; }
+
+.game-title-link {
+  color: #cc3300;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.game-title-link:hover { color: #ff4400; text-decoration: underline; }
+
+.game-title-link-sm {
+  color: #cc3300;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.game-title-link-sm:hover { color: #ff4400; text-decoration: underline; }
+
+.game-desc {
+  color: #444;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.game-desc-sm {
+  color: #555;
+  font-size: 11px;
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+
+.game-cat-link {
+  color: #666;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+.game-cat-link:hover { color: #cc3300; }
+
+/* Side column */
+.featured-side {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.game-card-medium {
+  display: flex;
+  gap: 8px;
+}
+
+.game-thumb-medium {
+  width: 100px;
+  height: 80px;
+  flex-shrink: 0;
+  border: 1px solid #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.game-thumb-medium:hover { opacity: 0.88; }
+.game-info-med { flex: 1; min-width: 0; }
+
+/* ===== SMALL CARD ROW ===== */
+.small-games-row {
+  display: flex;
+  padding: 8px 10px;
+  gap: 8px;
+}
+
+.game-card-small {
+  flex: 1;
+  display: flex;
+  gap: 7px;
+  min-width: 0;
+}
+
+.game-thumb-small {
+  width: 78px;
+  height: 62px;
+  flex-shrink: 0;
+  border: 1px solid #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.game-thumb-small:hover { opacity: 0.88; }
+.game-info-small { flex: 1; min-width: 0; }
+
+/* ===== NEWEST GAMES GRID ===== */
+.newest-games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.game-card-new {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.game-card-new:nth-child(3n) { border-right: none; }
+.game-card-new:nth-last-child(-n+3) { border-bottom: none; }
+
+.game-thumb-new {
+  width: 78px;
+  height: 62px;
+  flex-shrink: 0;
+  border: 1px solid #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.game-thumb-new:hover { opacity: 0.88; }
+.game-info-new { flex: 1; min-width: 0; }
+
+/* ===== GAME PAGE ===== */
+.game-page-container {
+  width: 960px;
+  margin: 6px auto 0;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.game-main-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.game-title-bar {
+  background: #f0f0f0;
+  border: 1px solid #aaaaaa;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+}
+
+.game-title-bar h1 {
+  font-size: 16px;
+  color: #cc3300;
+  font-weight: bold;
+}
+
+.breadcrumb {
+  color: #888;
+  font-size: 11px;
+}
+
+.breadcrumb a { color: #cc3300; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.flash-wrapper {
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+}
+
+.flash-player-area {
+  background: #111111;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#flash-container {
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+.game-footer-info {
+  padding: 8px 10px;
+  border-top: 1px solid #eeeeee;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-link {
+  color: #cc3300;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.back-link:hover { color: #ff4400; }
+
+.game-note {
+  color: #777;
+  font-size: 11px;
+}
+
+/* game info sidebar (right) */
+.game-sidebar {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.game-info-box {
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+  margin-bottom: 6px;
+}
+
+.info-box-header {
+  background: #f0f0f0;
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 8px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+}
+
+.info-box-body {
+  padding: 8px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 11px;
+  border-bottom: 1px dotted #eee;
+  padding-bottom: 4px;
+}
+
+.info-row:last-child { border-bottom: none; margin-bottom: 0; }
+.info-label { color: #666; }
+.info-value { color: #333; font-weight: bold; }
+
+.game-desc-box {
+  font-size: 11px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #2b2b2b;
+  padding: 8px 0;
+  margin-top: 6px;
+}
+
+.footer-inner {
+  width: 960px;
+  margin: 0 auto;
+  color: #777;
+  font-size: 11px;
+  text-align: center;
+}
